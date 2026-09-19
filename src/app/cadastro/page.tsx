@@ -90,12 +90,12 @@ export default function CadastroPage() {
           margin: '0 auto',
         }}
       >
-        {/* Parâmetros exclusivos do Cadastro (ajuste livremente size e topOffset aqui) */}
+        {/* Parâmetros exclusivos do Cadastro */}
         <LogoContainer size={120} topOffset="-20px" marginBottom="12px" />
 
         <div style={{ width: '100%', display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
           
-          {/* Caixa do Vídeo */}
+          {/* Caixa do Vídeo com reprodutor integrado */}
           <div
             style={{
               width: '100%',
@@ -122,16 +122,28 @@ export default function CadastroPage() {
               style={{
                 width: '100%',
                 aspectRatio: '16/9',
-                backgroundColor: '#111111',
+                backgroundColor: '#000000',
                 border: '2px dashed #FF0000',
                 display: 'flex',
                 alignItems: 'center',
                 justifyContent: 'center',
-                color: '#888888',
-                fontSize: '15px',
+                overflow: 'hidden',
               }}
             >
-              [INSIRA AQUI O SEU VÍDEO // &lt;iframe&gt; OU &lt;video&gt;]
+              <video
+                src="/apresentacao.mp4"
+                controls
+                playsInline
+                preload="metadata"
+                style={{
+                  width: '100%',
+                  height: '100%',
+                  objectFit: 'cover',
+                  outline: 'none',
+                }}
+              >
+                O seu navegador não suporta a reprodução deste vídeo.
+              </video>
             </div>
           </div>
 
